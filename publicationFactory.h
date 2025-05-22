@@ -4,5 +4,7 @@
 
 #ifndef PUBLICATIONFACTORY_H
 #define PUBLICATIONFACTORY_H
+class PublicationFactory {
 
+}
 #endif //PUBLICATIONFACTORY_H
