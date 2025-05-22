@@ -8,16 +8,24 @@
 #define MEDIA_FACTORY_H
 
 #include <string>
-class Media;
+#include "media.h"
+#include "publicationFactory.h"
+#include "movieFactory.h"
 
-// Add any other media headers here
+// A factory that contains sub-factories for publications and movies. A character is passed and produces a hash which then
+// determines which factory the hash needs to be passed into.
 
 using namespace std;
 
 class MediaFactory {
 public:
     MediaFactory();                               // default constructor
+    ~MediaFactory();
     Media* createMedia() const = 0; //
+private:
+publicationFactory pubFac;
+movieFactory movFac;
+int hash();
 };
 
 #endif // MEDIA_FACTORY_H
